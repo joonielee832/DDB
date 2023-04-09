@@ -16,7 +16,7 @@ gtav_train_pipeline = [
 ]
 train_gtav = dict(
     type="GTADataset",
-    data_root="data/gta/",
+    data_root="/home/data/gta/",
     img_dir="images",
     ann_dir="labels",
     pipeline=gtav_train_pipeline,
