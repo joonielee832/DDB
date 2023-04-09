@@ -1,6 +1,6 @@
 _base_ = [
     "./uda_gta_512x512_pmd.py",
-    "./uda_cityscapes_512x512.py",
+    "../uda_cityscapes_512x512.py",
 ]
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True
