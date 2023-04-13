@@ -8,3 +8,6 @@ prototypes
 pretrained
 scripts
 thirdparty
+dass.egg-info
+dist
+build
