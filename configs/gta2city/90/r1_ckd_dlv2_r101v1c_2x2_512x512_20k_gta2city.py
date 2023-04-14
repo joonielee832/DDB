@@ -12,10 +12,10 @@ _base_ = [
     "../../_base_/schedules/schedule_40k.py",
 ]
 uda = dict(
-    cu_model_load_from="",
-    ca_model_load_from="",
-    cu_proto_path="",
-    ca_proto_path="",
+    cu_model_load_from="/home/results/90/checkpoints/r1_st_cu_r101.pth",
+    ca_model_load_from="/home/results/90/checkpoints/r1_st_ca_r101.pth",
+    cu_proto_path="/home/results/90/prototypes/gta2city_st-cu_dlv2.pth",
+    ca_proto_path="/home/results/90/prototypes/gta2city_st-ca_dlv2.pth",
     proto_rectify=True,
 )
 # Random Seed

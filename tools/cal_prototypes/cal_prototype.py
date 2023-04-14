@@ -28,6 +28,9 @@ def parse_args():
         "--epochs", default=4, type=int, help="epochs for calculating the prototypes"
     )
     parser.add_argument(
+        "--compress_ratio", default=100, type=int, help="compression ratio save dir"
+    )
+    parser.add_argument(
         "--gpu-id",
         type=int,
         default=0,
@@ -76,7 +79,8 @@ if __name__ == "__main__":
     save_pre_fix = f"{meta_info[-1]}_{meta_info[1]}-{meta_info[2]}_{meta_info[3]}"
     if args.postfix is not None:
         save_pre_fix += f"_{args.postfix}"
-    args.save_dir = osp.join("prototypes", f"{meta_info[-1]}_round{meta_info[0][-1]}")
+    args.save_dir = osp.join("/home", "results", f"{args.compress_ratio}", 
+                             "prototypes", f"{meta_info[-1]}_round{meta_info[0][-1]}")
     mmcv.mkdir_or_exist(osp.abspath(args.save_dir))
     save_path = osp.join(args.save_dir, save_pre_fix + ".pth")
 
